@@ -18,18 +18,8 @@
            $gender = $_POST['gender'];
            $password = $_POST['password'];
 
-
-
-
-
            $targetWeight = $_POST['targetWeight'];
            $activityLevel = $_POST['activityLevel'];
-
-
-
-
-
-
 
 
             

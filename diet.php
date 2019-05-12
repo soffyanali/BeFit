@@ -1,7 +1,7 @@
 <?php
 /*
    * Soffyan Ali X13114531
-   * Front-End of Meal Plan
+   * Front-End of Food Recommendation
    */
 session_start();
 ?>
@@ -84,7 +84,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
         <form action="#" method="post"  id="demoForm3" class='rd-mailform' >
         <div class="blank-page widget-shadow scroll" id="style-2 div1">
           <div class="row">
-          <h3 class="title1" >Recommendation food item</h3> 
+          <h3 class="title1" >Recommendation of selected Food item</h3> 
          <button type="submit" class="btn btn-success" name="submit" >Submit</button>
          <br>
          <br>
@@ -118,7 +118,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		<div id="page-wrapper">
 			<div class="main-page">
         <form action="#" method="post"  id="demoForm1" class='rd-mailform' >
-				<h2 class="title1">Diet Recipes</h2>
+				<h2 class="title1">Food Choices</h2>
 				<div class="blank-page widget-shadow scroll" id="style-2 div1">
 					<div class="row">
 					<h3 class="title1" >Select the Item</h3> 
@@ -158,11 +158,6 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				</form>
 			</div>
 		</div>
-    
-    
-
-
-
     
 		<!--footer-->
 		

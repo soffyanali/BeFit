@@ -1,5 +1,7 @@
 <?php
 //index.php
+// Soffyan Ali x13114531
+// Heart-rate Graph
 $connect = mysqli_connect("localhost", "root", "", "be_fit");
 $query = '
 SELECT heart_rate,timeOfRecord as datetime FROM user_health_status ORDER by timeOfRecord DESC limit 10
@@ -39,8 +41,9 @@ $jsonTable = json_encode($table);
 
 // echo $jsonTable;
 
-?>
+// Below is the Heart-Rate Line Chart
 
+?>
 
 <html>
  <head>

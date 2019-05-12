@@ -1,5 +1,3 @@
-
-
 <?php
 
 // Running the Rscript

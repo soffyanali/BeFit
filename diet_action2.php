@@ -1,4 +1,7 @@
-    <?php
+<?php
+// Soffyan Ali X13114531
+// Meal Plan Back-End
+// BMI-BMR & calories needed Class
 
 $email = $_SESSION['login_user'];
 
@@ -32,6 +35,7 @@ $email = $_SESSION['login_user'];
                 }
 
     
+//BMI Function
 
         function bmi($weight,$height) {
             $ht=$height/100;
@@ -58,7 +62,7 @@ $email = $_SESSION['login_user'];
 // storing bmi in variable bmiuser
        $bmiuser = bmi($weight,$height); 
 
-       function  calculateBMR($height,$weight,$gender,$age,$activityLevel) { 
+    function  calculateBMR($height,$weight,$gender,$age,$activityLevel) { 
             $bmr=((10 * $weight) + (6.25*$height) - (5*$age));
         
             if($gender=="male") {
@@ -73,6 +77,7 @@ $email = $_SESSION['login_user'];
             
             return $calories;
             }
+
     function calculateCaloriesNeeded($height,$gender, $age, $activityLevel, $targetWeight) {
             
             $ht=$height/100;
@@ -88,7 +93,7 @@ $email = $_SESSION['login_user'];
 //stored calories required in variable caloriesRequired
     $caloriesRequired=calculateCaloriesNeeded($height,$gender, $age, $activityLevel, $targetWeight);
 
-//divide the calories for breakfast
+// Below dividing the calories for breakfast
     $percentage = 40;
 $caloriesRequiredForBreakfast = ($percentage / 100) * $caloriesRequired;
 
@@ -128,6 +133,7 @@ $caloriesRequiredForBreakfast = ($percentage / 100) * $caloriesRequired;
                         echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
                 }
 
+// Dividing the calories for Lunch
 
 $percentage = 40;
 $caloriesRequiredForLunch = ($percentage / 100) * $caloriesRequired;
@@ -142,9 +148,9 @@ $sql3 = "SELECT * FROM recipe where calories between $caloriesRequiredForLunch-1
                             while($row = mysqli_fetch_array($result)){
 
 
-                                $diet_list2 .="<tr>
+                                $diet_list2 .= "<tr>
                                 <td>
-                                            <input  class='messageCheckbox'  id='toppings2' type='checkbox' value= '$row[calories]' >
+                                        <input  class='messageCheckbox'  id='toppings2' type='checkbox' value= '$row[calories]' >
                                                         
                                             </td>
                                             <td>".$row['title']."</td>
@@ -153,7 +159,7 @@ $sql3 = "SELECT * FROM recipe where calories between $caloriesRequiredForLunch-1
                                             <td>".$row['ingredients']."</td>
                                             <td>".$row['directions']."</td>
                                             
-                                        </tr>";
+                                    </tr>";
                             }
             
                                  // Close result set
@@ -166,7 +172,8 @@ $sql3 = "SELECT * FROM recipe where calories between $caloriesRequiredForLunch-1
                         echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
                 }
 
-
+// Dividing the Dinner Calories
+                
 $percentage = 20;
 $caloriesRequiredForDinner = ($percentage / 100) * $caloriesRequired;
 

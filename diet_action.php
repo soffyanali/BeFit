@@ -1,6 +1,6 @@
     <?php
-
-//Getting user id
+// Food Recommendation Back-End class 
+// Getting user id
            $sql9 = new mysqli("localhost","root","","be_fit"); //EDIT with your parameters for DB
             $sql9 -> set_charset ( 'utf8' );
             if ($sql9->connect_errno) {
